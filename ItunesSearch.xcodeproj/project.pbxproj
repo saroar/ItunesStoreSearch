@@ -14,6 +14,9 @@
 		C36DB7C01EB651C400CB40F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7BE1EB651C400CB40F5 /* LaunchScreen.storyboard */; };
 		C36DB7CB1EB651C400CB40F5 /* ItunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7CA1EB651C400CB40F5 /* ItunesSearchTests.swift */; };
 		C36DB7D61EB7174E00CB40F5 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */; };
+		C36DB7D81EB73D1C00CB40F5 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7D71EB73D1C00CB40F5 /* SearchResultCell.xib */; };
+		C36DB7DA1EB748E400CB40F5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */; };
+		C36DB7DC1EB7A50700CB40F5 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		C36DB7CA1EB651C400CB40F5 /* ItunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchTests.swift; sourceTree = "<group>"; };
 		C36DB7CC1EB651C400CB40F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		C36DB7D71EB73D1C00CB40F5 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 			children = (
 				C36DB7B51EB651C400CB40F5 /* AppDelegate.swift */,
 				C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */,
+				C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */,
+				C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */,
+				C36DB7D71EB73D1C00CB40F5 /* SearchResultCell.xib */,
 				C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */,
 				C36DB7B91EB651C400CB40F5 /* Main.storyboard */,
 				C36DB7BC1EB651C400CB40F5 /* Assets.xcassets */,
@@ -186,6 +195,8 @@
 			files = (
 				C36DB7C01EB651C400CB40F5 /* LaunchScreen.storyboard in Resources */,
 				C36DB7BD1EB651C400CB40F5 /* Assets.xcassets in Resources */,
+				C36DB7D81EB73D1C00CB40F5 /* SearchResultCell.xib in Resources */,
+				C36DB7DC1EB7A50700CB40F5 /* NothingFoundCell.xib in Resources */,
 				C36DB7BB1EB651C400CB40F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +217,7 @@
 			files = (
 				C36DB7B81EB651C400CB40F5 /* SearchViewController.swift in Sources */,
 				C36DB7D61EB7174E00CB40F5 /* SearchResult.swift in Sources */,
+				C36DB7DA1EB748E400CB40F5 /* SearchResultCell.swift in Sources */,
 				C36DB7B61EB651C400CB40F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
