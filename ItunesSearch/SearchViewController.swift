@@ -211,22 +211,29 @@ extension SearchViewController: UISearchBarDelegate {
                 if let error = error {
                     print("Failure! \(error)")
                 } else if let httpResponse = response as? HTTPURLResponse,
-                              httpResponse.statusCode == 200 {
-                    print("On main thread? " + (Thread.current.isMainThread ? "Yes" : "No"))
+                    httpResponse.statusCode == 200 {
+                    
                     if let data =  data, let jsonDictonary = self.parse(json: data) {
                         self.searchResults = self.parse(dictionary: jsonDictonary)
                         self.searchResults.sort(by: <)
                         
                         DispatchQueue.main.async {
-                            self.hasSearched = false
                             self.isLoading = false
                             self.tableView.reloadData()
-                            self.showNetWorkError()
+                            
                         }
                         return
                     }
+                    
                 } else {
                     print("Failure! \(response!)")
+                }
+                
+                DispatchQueue.main.async {
+                    self.hasSearched = false
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                    self.showNetworkError()
                 }
             })
             
