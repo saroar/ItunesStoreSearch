@@ -19,6 +19,7 @@
 		C36DB7DE1EB9C4D800CB40F5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */; };
 		C3C4BC951EBB16C000862ABA /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */; };
 		C3C4BC991EBB2E9500862ABA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BC981EBB2E9500862ABA /* Search.swift */; };
+		C3C4BCA21EBB581E00862ABA /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BCA11EBB581E00862ABA /* SearchViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		C3C4BC981EBB2E9500862ABA /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		C3C4BCA11EBB581E00862ABA /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,18 +91,12 @@
 		C36DB7B41EB651C400CB40F5 /* ItunesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				C36DB7B51EB651C400CB40F5 /* AppDelegate.swift */,
-				C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */,
-				C3C4BC981EBB2E9500862ABA /* Search.swift */,
-				C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */,
-				C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */,
-				C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */,
-				C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */,
-				C36DB7D71EB73D1C00CB40F5 /* SearchResultCell.xib */,
-				C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */,
-				C36DB7B91EB651C400CB40F5 /* Main.storyboard */,
-				C36DB7BC1EB651C400CB40F5 /* Assets.xcassets */,
-				C36DB7C11EB651C400CB40F5 /* Info.plist */,
+				C3C4BC9B1EBB53EC00862ABA /* AppDelegate */,
+				C3C4BC9C1EBB54F700862ABA /* Controllers */,
+				C3C4BC9D1EBB553A00862ABA /* Models */,
+				C3C4BC9E1EBB560400862ABA /* UI_Interface */,
+				C3C4BC9F1EBB56A100862ABA /* Resources */,
+				C3C4BCA01EBB578100862ABA /* Supporting Files */,
 			);
 			path = ItunesSearch;
 			sourceTree = "<group>";
@@ -109,9 +105,64 @@
 			isa = PBXGroup;
 			children = (
 				C36DB7CA1EB651C400CB40F5 /* ItunesSearchTests.swift */,
+				C3C4BCA11EBB581E00862ABA /* SearchViewControllerTests.swift */,
 				C36DB7CC1EB651C400CB40F5 /* Info.plist */,
 			);
 			path = ItunesSearchTests;
+			sourceTree = "<group>";
+		};
+		C3C4BC9B1EBB53EC00862ABA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C36DB7B51EB651C400CB40F5 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C3C4BC9C1EBB54F700862ABA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C3C4BC9D1EBB553A00862ABA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */,
+				C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */,
+				C3C4BC981EBB2E9500862ABA /* Search.swift */,
+				C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C3C4BC9E1EBB560400862ABA /* UI_Interface */ = {
+			isa = PBXGroup;
+			children = (
+				C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */,
+				C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */,
+				C36DB7D71EB73D1C00CB40F5 /* SearchResultCell.xib */,
+				C36DB7B91EB651C400CB40F5 /* Main.storyboard */,
+			);
+			name = UI_Interface;
+			sourceTree = "<group>";
+		};
+		C3C4BC9F1EBB56A100862ABA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C36DB7BC1EB651C400CB40F5 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C3C4BCA01EBB578100862ABA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C36DB7C11EB651C400CB40F5 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3C4BCA21EBB581E00862ABA /* SearchViewControllerTests.swift in Sources */,
 				C36DB7CB1EB651C400CB40F5 /* ItunesSearchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
