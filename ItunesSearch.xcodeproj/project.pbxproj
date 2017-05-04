@@ -11,13 +11,13 @@
 		C36DB7B81EB651C400CB40F5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */; };
 		C36DB7BB1EB651C400CB40F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7B91EB651C400CB40F5 /* Main.storyboard */; };
 		C36DB7BD1EB651C400CB40F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7BC1EB651C400CB40F5 /* Assets.xcassets */; };
-		C36DB7C01EB651C400CB40F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7BE1EB651C400CB40F5 /* LaunchScreen.storyboard */; };
 		C36DB7CB1EB651C400CB40F5 /* ItunesSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7CA1EB651C400CB40F5 /* ItunesSearchTests.swift */; };
 		C36DB7D61EB7174E00CB40F5 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */; };
 		C36DB7D81EB73D1C00CB40F5 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7D71EB73D1C00CB40F5 /* SearchResultCell.xib */; };
 		C36DB7DA1EB748E400CB40F5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */; };
 		C36DB7DC1EB7A50700CB40F5 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */; };
 		C36DB7DE1EB9C4D800CB40F5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */; };
+		C3C4BC951EBB16C000862ABA /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C36DB7BA1EB651C400CB40F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C36DB7BC1EB651C400CB40F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C36DB7BF1EB651C400CB40F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C36DB7C11EB651C400CB40F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36DB7C61EB651C400CB40F5 /* ItunesSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ItunesSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36DB7CA1EB651C400CB40F5 /* ItunesSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesSearchTests.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,7 @@
 			children = (
 				C36DB7B51EB651C400CB40F5 /* AppDelegate.swift */,
 				C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */,
+				C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */,
 				C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */,
 				C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */,
 				C36DB7D91EB748E400CB40F5 /* SearchResultCell.swift */,
@@ -96,7 +97,6 @@
 				C36DB7D51EB7174E00CB40F5 /* SearchResult.swift */,
 				C36DB7B91EB651C400CB40F5 /* Main.storyboard */,
 				C36DB7BC1EB651C400CB40F5 /* Assets.xcassets */,
-				C36DB7BE1EB651C400CB40F5 /* LaunchScreen.storyboard */,
 				C36DB7C11EB651C400CB40F5 /* Info.plist */,
 			);
 			path = ItunesSearch;
@@ -196,7 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36DB7C01EB651C400CB40F5 /* LaunchScreen.storyboard in Resources */,
 				C36DB7BD1EB651C400CB40F5 /* Assets.xcassets in Resources */,
 				C36DB7DE1EB9C4D800CB40F5 /* LoadingCell.xib in Resources */,
 				C36DB7D81EB73D1C00CB40F5 /* SearchResultCell.xib in Resources */,
@@ -223,6 +222,7 @@
 				C36DB7D61EB7174E00CB40F5 /* SearchResult.swift in Sources */,
 				C36DB7DA1EB748E400CB40F5 /* SearchResultCell.swift in Sources */,
 				C36DB7B61EB651C400CB40F5 /* AppDelegate.swift in Sources */,
+				C3C4BC951EBB16C000862ABA /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,14 +251,6 @@
 				C36DB7BA1EB651C400CB40F5 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C36DB7BE1EB651C400CB40F5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C36DB7BF1EB651C400CB40F5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -432,6 +424,7 @@
 				C36DB7D11EB651C400CB40F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C36DB7D21EB651C400CB40F5 /* Build configuration list for PBXNativeTarget "ItunesSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +433,7 @@
 				C36DB7D41EB651C400CB40F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

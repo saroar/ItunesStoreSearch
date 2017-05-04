@@ -13,7 +13,8 @@ class SearchViewController: UIViewController {
     var hasSearched = false
     var isLoading   = false
     var dataTask: URLSessionDataTask?
-    
+
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -46,9 +47,21 @@ class SearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func iTunesURL(searchText: String) -> URL {
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        performSearch()
+    }
+
+    func iTunesURL(searchText: String, category: Int) -> URL {
+        let entityName: String
+        switch category {
+        case 1: entityName = "musicTrack"
+        case 2: entityName = "software"
+        case 3: entityName = "ebook"
+        default: entityName = ""
+        }
+        
         let escapedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format:"https://itunes.apple.com/search?term=%@&limit=200", escapedSearchText)
+        let urlString = String(format:"https://itunes.apple.com/search?term=%@&limit=200&entity=%@", escapedSearchText, entityName)
         let url = URL(string: urlString)
         return url!
     }
@@ -74,13 +87,13 @@ class SearchViewController: UIViewController {
     func parse(track dictionary: [String: Any]) -> SearchResult {
         let searchResult = SearchResult()
         
-        searchResult.name          = dictionary["trackName"] as! String
-        searchResult.artistName    = dictionary["artistName"] as! String
+        searchResult.name            = dictionary["trackName"] as! String
+        searchResult.artistName      = dictionary["artistName"] as! String
         searchResult.artworkSmallURL = dictionary["artworkUrl60"] as! String
         searchResult.artworkLargeURL = dictionary["artworkUrl100"] as! String
-        searchResult.storeURL      = dictionary["trackViewUrl"] as! String
-        searchResult.kind          = dictionary["kind"] as! String
-        searchResult.currency      = dictionary["currency"] as! String
+        searchResult.storeURL        = dictionary["trackViewUrl"] as! String
+        searchResult.kind            = dictionary["kind"] as! String
+        searchResult.currency        = dictionary["currency"] as! String
         
         if let price = dictionary["trackPrice"] as? Double {
             searchResult.price = price
@@ -113,13 +126,14 @@ class SearchViewController: UIViewController {
     
     func parse(software dictionary: [String: Any]) -> SearchResult {
         let searchResult = SearchResult()
-        searchResult.name = dictionary["collectionName"] as! String
+        searchResult.name = dictionary["trackName"] as! String
         searchResult.artistName = dictionary["artistName"] as! String
         searchResult.artworkSmallURL = dictionary["artworkUrl60"] as! String
         searchResult.artworkLargeURL = dictionary["artworkUrl100"] as! String
-        searchResult.storeURL = dictionary["collectionViewUrl"] as! String
-        searchResult.kind = "audiobook"
+        searchResult.storeURL = dictionary["trackViewUrl"] as! String
+        searchResult.kind = dictionary["kind"] as! String
         searchResult.currency = dictionary["currency"] as! String
+        
         if let price = dictionary["price"] as? Double {
             searchResult.price = price
         }
@@ -196,6 +210,10 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        performSearch()
+    }
+    
+    func performSearch() {
         if !searchBar.text!.isEmpty {
             searchBar.resignFirstResponder()
             dataTask?.cancel()
@@ -205,14 +223,14 @@ extension SearchViewController: UISearchBarDelegate {
             hasSearched = true
             searchResults = []
             
-            let url = iTunesURL(searchText: searchBar.text!)
+            let url = self.iTunesURL(searchText: searchBar.text!,
+                                     category: segmentedControl.selectedSegmentIndex)
             
             let session = URLSession.shared
             
             dataTask = session.dataTask(with: url, completionHandler: { data, response, error in
-                if let error = error as NSError?, error.code == -999{
+                if let error = error as NSError?, error.code == -999 {
                     return
-                    
                 } else if let httpResponse = response as? HTTPURLResponse,
                     httpResponse.statusCode == 200 {
                     
@@ -295,6 +313,7 @@ extension SearchViewController: UITableViewDataSource {
                 cell.artistNameLabel.text = String(format: "%@, (%@)", searchResult.artistName,
                                                    kindForDisplay(searchResult.kind))
             }
+            cell.config(for: searchResult)
             return cell
         }
     }
