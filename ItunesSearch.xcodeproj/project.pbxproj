@@ -18,6 +18,7 @@
 		C36DB7DC1EB7A50700CB40F5 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */; };
 		C36DB7DE1EB9C4D800CB40F5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */; };
 		C3C4BC951EBB16C000862ABA /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */; };
+		C3C4BC991EBB2E9500862ABA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4BC981EBB2E9500862ABA /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		C3C4BC981EBB2E9500862ABA /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				C36DB7B51EB651C400CB40F5 /* AppDelegate.swift */,
 				C36DB7B71EB651C400CB40F5 /* SearchViewController.swift */,
+				C3C4BC981EBB2E9500862ABA /* Search.swift */,
 				C3C4BC941EBB16C000862ABA /* UIImageView+DownloadImage.swift */,
 				C36DB7DD1EB9C4D800CB40F5 /* LoadingCell.xib */,
 				C36DB7DB1EB7A50700CB40F5 /* NothingFoundCell.xib */,
@@ -221,6 +224,7 @@
 				C36DB7B81EB651C400CB40F5 /* SearchViewController.swift in Sources */,
 				C36DB7D61EB7174E00CB40F5 /* SearchResult.swift in Sources */,
 				C36DB7DA1EB748E400CB40F5 /* SearchResultCell.swift in Sources */,
+				C3C4BC991EBB2E9500862ABA /* Search.swift in Sources */,
 				C36DB7B61EB651C400CB40F5 /* AppDelegate.swift in Sources */,
 				C3C4BC951EBB16C000862ABA /* UIImageView+DownloadImage.swift in Sources */,
 			);
